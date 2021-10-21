@@ -26,8 +26,8 @@ export class LecturerResolver {
       Lecturer,
       newLecturerData,
     )
-    this.manager.save(lecture)
-    return lecture
+    const resLec = await this.manager.save(lecture)
+    return resLec
   }
 
   @Mutation(() => String)
